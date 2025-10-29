@@ -1,0 +1,31 @@
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    var ex = (double)ViewBag.Exaustao;
+    var dp = (double)ViewBag.Despersonalizacao;
+    var rp = (double)ViewBag.RealizacaoInv;
+    var classe = (string)ViewBag.Classificacao;
+    var sus = (double)ViewBag.SUS;
+}
+<div class="row">
+  <div class="col-lg-8 mx-auto">
+    <div class="card shadow-sm">
+      <div class="card-body p-4">
+        <h2 class="h4">Resultado</h2>
+        <p class="mb-0">Exaustão emocional: <strong>@ex</strong></p>
+        <p class="mb-0">Despersonalização: <strong>@dp</strong></p>
+        <p class="mb-3">Realização pessoal (inversa): <strong>@rp</strong></p>
+        <div class="alert alert-@(classe=="Alto risco"?"danger":(classe=="Moderado"?"warning":"success"))">
+            Classificação global: <strong>@classe</strong>
+        </div>
+        <hr />
+        <p class="mb-1">SUS (usabilidade do site): <strong>@sus</strong> / 100</p>
+        <p class="text-muted small">Interpretação comum: &lt;50 (ruim), 50–70 (ok), 70–80 (bom), &gt;= 80 (excelente).</p>
+        <a class="btn btn-outline-secondary" href="/">Nova participação</a>
+      </div>
+    </div>
+    <div class="text-muted small mt-3">
+      Este retorno é um <em>screening</em> e não substitui avaliação profissional.
+      Se precisar, procure apoio (ex.: CVV 188 e serviços de saúde).
+    </div>
+  </div>
+</div>
