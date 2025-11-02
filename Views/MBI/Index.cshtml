@@ -3,7 +3,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2 class="h4 mb-3">Questionário MBI</h2>
+<h2 class="h4 mb-3">Questionário</h2>
 <p class="text-muted">Responda de 0 (Nunca) a 6 (Todos os dias).</p>
 
 <form id="mbiForm" method="post">
@@ -25,7 +25,7 @@
       <section class="mbi-group @(isFirst ? "" : "d-none")" data-index="@gi">
         <h5 class="mb-2">@g.Titulo</h5>
         @if (!string.IsNullOrWhiteSpace(g.Explicacao)) {
-          <div class="alert alert-info small">@g.Explicacao</div>
+          <div class="alert alert-info">@g.Explicacao</div>
         }
 
         <div class="vstack gap-3">
@@ -37,7 +37,7 @@
                 <div class="d-flex flex-wrap gap-2">
                   @for (int v = 0; v <= 6; v++)
                   {
-                      var req = isFirst ? "required" : null; // required só no 1º grupo
+                      var req = isFirst ? "required" : null;
                       <div class="form-check form-check-inline">
                         <input class="form-check-input"
                                type="radio"
@@ -62,7 +62,7 @@
 
   <div class="mt-3 d-flex justify-content-between">
     <a class="btn btn-outline-secondary" href="/Consent">Voltar</a>
-    <button class="btn btn-primary" type="submit">Prosseguir para avaliação do site (SUS)</button>
+    <button class="btn btn-primary" type="submit">Prosseguir para avaliação do site</button>
   </div>
 </form>
 
