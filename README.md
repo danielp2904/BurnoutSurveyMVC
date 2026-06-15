@@ -185,16 +185,6 @@ SurveyQuestion (int PK)
 
 ---
 
-## Próximos Passos (Roadmap)
-
-- [ ] Testes unitários para o `ScoringService`
-- [ ] Painel administrativo para visualização agregada dos resultados
-- [ ] Exportação dos dados para CSV/Excel
-- [ ] Autenticação para acesso ao painel de resultados
-- [ ] Suporte a múltiplos idiomas (i18n)
-
----
-
 ## Autor
 
 Daniel — [github.com/danielp2904](https://github.com/danielp2904)
